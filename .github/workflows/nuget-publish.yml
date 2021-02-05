@@ -24,7 +24,7 @@ jobs:
       - name: update xml file
         run: |
           sudo snap install xmlstarlet 
-          xmlstarlet ed -L -u /project/version -v "${{ github.event.inputs.version }}" Cryptlex.LexActivator.nuspec    
+          xmlstarlet ed -L -u /Cryptlex.LexActivator/version -v "${{ github.event.inputs.version }}" Cryptlex.LexActivator.nuspec    
       
       - name: update text file
         run: |
