@@ -32,7 +32,7 @@ jobs:
      
       - name: commit and tag
         run: |
-          git add Cryptlex.LexActivator.nuspec
+          git add ./src/Cryptlex.LexActivator/Cryptlex.LexActivator.nuspec
           git add post-build.ps1
           git config --local user.email "github-actions@users.noreply.github.com"
           git config --local user.name "github-actions"
