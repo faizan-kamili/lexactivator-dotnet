@@ -3,11 +3,11 @@ name: Build Cryptlex.LexActivator package
 on:
   workflow_dispatch:
     inputs:
-      libaray version:
+      - libaray version:
         description: 'library version'
         required: true
         default: ''
-      package version:
+      - package version:
         description: 'package version'
         required: true
         default: ''
