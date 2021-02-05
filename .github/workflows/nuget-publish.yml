@@ -1,9 +1,13 @@
 name: Build Cryptlex.LexActivator package
 
 on:
-  push:
-    tags:
-    - '3.*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'library version'
+        description: 'package version'
+        required: true
+        default: ''
 
 jobs:
   build-publish:
