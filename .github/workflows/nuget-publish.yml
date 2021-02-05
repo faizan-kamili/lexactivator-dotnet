@@ -29,6 +29,21 @@ jobs:
       - name: update text file
         run: |
           sed -i '/lexactivator_version =/!b;c$lexactivator_version ="${{ github.event.inputs.version }}"' post-build.ps1
+     
+      - name: commit and tag
+        run: |
+          git add Cryptlex.LexActivator.nuspec
+          git add post-build.ps1
+          git config --local user.email "github-actions@users.noreply.github.com"
+          git config --local user.name "github-actions"
+          git commit -m "updated version"
+          git tag ${{ github.event.inputs.package version }}    
+      
+      - name: push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          tags: true    
 
   build-publish:
     needs: update-version
