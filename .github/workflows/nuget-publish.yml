@@ -4,7 +4,6 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'library version'
         description: 'package version'
         required: true
         default: ''
