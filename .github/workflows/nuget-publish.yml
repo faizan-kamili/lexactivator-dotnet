@@ -3,14 +3,14 @@ name: Build Cryptlex.LexActivator package
 on:
   workflow_dispatch:
     inputs:
-      - libaray version:
-          description: 'library version'
-          required: true
-          default: ''
-      - package version:
-          description: 'package version'
-          required: true
-          default: ''
+      libaray version:
+        description: 'library version'
+        required: true
+        default: ''
+      package version:
+        description: 'package version'
+        required: true
+        default: ''
 
 jobs:
   update-version-job:
