@@ -23,16 +23,4 @@
       <reference file="Cryptlex.LexActivator.dll"/>
     </references>
   </metadata>
-  <files>
-    <file src="build\Cryptlex.LexActivator.targets" target="build\Cryptlex.LexActivator.targets"/>
-    <file src="runtimes\win-x86\native\*.dll" target="runtimes\win-x86\native"/>
-    <file src="runtimes\win-x64\native\*.dll" target="runtimes\win-x64\native"/>
-    <file src="runtimes\osx-x64\native\*.dylib" target="runtimes\osx-x64\native"/>
-    <file src="runtimes\linux-x64\native\*.so" target="runtimes\linux-x64\native"/>
-    <file src="runtimes\linux-musl-x64\native\*.so" target="runtimes\linux-musl-x64\native"/>
-    <file src="bin\Release\net45\Cryptlex.LexActivator.dll" target="lib\net45"/>
-    <file src="bin\Release\Cryptlex.LexActivator.xml" target="lib\net45"/>
-    <file src="bin\Release\netstandard1.1\Cryptlex.LexActivator.dll" target="lib\netstandard1.1"/>
-    <file src="bin\Release\Cryptlex.LexActivator.xml" target="lib\netstandard1.1"/>
-  </files>
 </package>

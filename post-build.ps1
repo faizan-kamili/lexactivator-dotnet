@@ -1,5 +1,5 @@
 $base_url = "https://dl.cryptlex.com/downloads"
-$lexactivator_version ="3.14.7"
+$lexactivator_version ="${{ github.event.inputs.packageVersion }}"
 new-item -Name tmp -ItemType directory
 
 $url = "$base_url/$lexactivator_version/LexActivator-Win.zip"
