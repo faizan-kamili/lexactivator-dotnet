@@ -23,8 +23,7 @@ jobs:
       
       - name: update xml file
         run: |
-          sudo snap install xmlstarlet 
-          sed -i '/<version>/!b;c \ \ \ \ <version>"${{ github.event.inputs.packageVersion }}"</version>' ./src/Cryptlex.LexActivator/Cryptlex.LexActivator.nuspec    
+          sed -i '/<version>/!b;c \ \ \ \ <version>${{ github.event.inputs.packageVersion }}</version>' ./src/Cryptlex.LexActivator/Cryptlex.LexActivator.nuspec    
       
       - name: update text file
         run: |
